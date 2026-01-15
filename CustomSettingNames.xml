@@ -31,7 +31,7 @@
 					<HexValue>0x00000000</HexValue>
 				</CustomSettingValue>
 				<CustomSettingValue>
-					<UserfriendlyName>Latest</UserfriendlyName>
+					<UserfriendlyName>Recommended</UserfriendlyName>
 					<HexValue>0x00000001</HexValue>
 				</CustomSettingValue>
 				<CustomSettingValue>
@@ -149,7 +149,7 @@
 					<HexValue>0x0000000F</HexValue>
 				</CustomSettingValue>
 				<CustomSettingValue>
-					<UserfriendlyName>Always use latest</UserfriendlyName>
+					<UserfriendlyName>Use recommended preset</UserfriendlyName>
 					<HexValue>0x00FFFFFF</HexValue>
 				</CustomSettingValue>
 			</SettingValues>
@@ -226,7 +226,7 @@
 					<HexValue>0x0000000F</HexValue>
 				</CustomSettingValue>
 				<CustomSettingValue>
-					<UserfriendlyName>Always use latest</UserfriendlyName>
+					<UserfriendlyName>Use recommended preset</UserfriendlyName>
 					<HexValue>0x00FFFFFF</HexValue>
 				</CustomSettingValue>
 			</SettingValues>
@@ -9071,6 +9071,8 @@
     </CustomSetting>-->
 	</Settings>
 </CustomSettingNames>
+
+
 
 
 

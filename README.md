@@ -22,4 +22,4 @@ As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jog
 ## Sobreposição Global de DLSS através do driver em qualquer jogo (nvidiaDlssGlom)
 ![image](https://i.imgur.com/qSoSCey.png)
 
-Veja como fazer [aqui](https://github.com/renannmp/dlssinspectorxml/blob/main/globaloverride.md)
+Veja como fazer [aqui](https://github.com/Warkratos/dlssinspector/blob/main/Dicas/globaloverride.md)

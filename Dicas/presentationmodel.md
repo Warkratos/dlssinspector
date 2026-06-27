@@ -36,7 +36,7 @@ As otimizações DirectFlip no Windows 11 (desde a versão 22H2), são feitas qu
 Em versões anteriores ao 22H2 do Windows 11 ou até mesmo no Windows 10, para fazer essa promoção automática, pode ser usado a [ferramenta Special K](https://wiki.special-k.info/), não recomendada para jogos online.
 
 ### Multi-Plane Overlay (MPO)
-Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, GeForce overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Ssem MPO a chance de cair de Independent Flip aumenta bastante, ainda mais com o uso de Overlays, o que aumenta a latência.  
+Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, NVIDIA overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Ssem MPO a chance de cair de Independent Flip aumenta bastante, ainda mais com o uso de overlays, o que aumenta a latência.  
 
 ### Como inspecionar o modo de apresentação
 Com o [PresentMon](https://game.intel.com/us/intel-presentmon/) (ou com o RTSS usando o sensor do presentmon), coloque o Preset em "Custom" e clique no botão "Edit" > "Add New Widget" > "Present Mode"
@@ -47,7 +47,7 @@ A informação "Present Mode" vai aparecer informando o modelo da janela do jogo
 
 
 # Considerações
-O jogo pode ficar em "Hardware: Independent Flip" sem o MPO, porém ao usar overlays, o jogo despenca para o modo com mais latência, e o MPO ainda se quebra com algumas limitações técnicas, a minha recomendação é sempre deixar o MPO ligado, para que tenha muito mais chances da janela ser feita na composição "Hardware Composed: Independent Flip".<br/>
+O jogo pode ficar em "Hardware: Independent Flip" sem o MPO, porém ao usar overlays, o jogo pode despencar para o modo com mais latência, e o MPO ainda se quebra com algumas limitações técnicas, a minha recomendação é sempre deixar o MPO ligado, para que tenha muito mais chances da janela ser feita na composição "Hardware Composed: Independent Flip".<br/>
 Como regra geral:<br/>
 **DX12** → sempre usa Flip model, mas pode usar modo de apresentação Composed Flip (Alta Latência), se as otimizações de DirectFlip estiverem desativadas e MPO quebrado.<br/>
 **DX11/10 em janela sem bordas, sem overlay** → provavelmente Flip, se as condições de DirectFlip e MPO estiverem ativadas (Windows 11 22H2+)<br/>

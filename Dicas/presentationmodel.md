@@ -36,7 +36,7 @@ As otimizações DirectFlip no Windows 11 (desde a versão 22H2), são feitas qu
 Em versões anteriores ao 22H2 do Windows 11 ou até mesmo no Windows 10, para fazer essa promoção automática, pode ser usado a [ferramenta Special K](https://wiki.special-k.info/), não recomendada para jogos online.
 
 ### Multi-Plane Overlay (MPO)
-Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, GeForce overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Sem MPO, o overlay tende a forçar composição tradicional com mais frequência, mas ainda depende do tipo de overlay e do comportamento do app. Ssem MPO a chance de cair de Independent Flip aumenta bastante, o que aumenta a latência.  
+Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, GeForce overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Ssem MPO a chance de cair de Independent Flip aumenta bastante, ainda mais com o uso de Overlays, o que aumenta a latência.  
 
 # Considerações
 O jogo pode ficar em "Hardware: Independent Flip" sem o MPO, porém ao usar overlays, o jogo despenca para o modo com mais latência, e o MPO ainda se quebra com algumas limitações técnicas, a minha recomendação é sempre deixar o MPO ligado, para que tenha muito mais chances da janela ser feita na composição "Hardware Composed: Independent Flip".<br/>
@@ -45,3 +45,5 @@ Como regra geral:<br/>
 **DX11/10 em janela sem bordas, sem overlay** → provavelmente Flip, se as condições de DirectFlip e MPO estiverem ativadas (Windows 11 22H2+)<br/>
 **DX11/10 com overlay de terceiros (NVIDIA App, Discord, etc.)** → pode cair para BitBlt/Composed<br/>
 **Jogos mais antigos (DX9, OpenGL)** → quase sempre BitBlt
+<br/><br/><br/><br/><br/>
+Fonte Principal: [Special-K](https://www.special-k.info/)

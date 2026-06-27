@@ -38,6 +38,14 @@ Em versões anteriores ao 22H2 do Windows 11 ou até mesmo no Windows 10, para f
 ### Multi-Plane Overlay (MPO)
 Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, GeForce overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Ssem MPO a chance de cair de Independent Flip aumenta bastante, ainda mais com o uso de Overlays, o que aumenta a latência.  
 
+### Como inspecionar o modo de apresentação
+Com o [PresentMon](https://game.intel.com/us/intel-presentmon/) (ou com o RTSS usando o sensor do presentmon), coloque o Preset em "Custom" e clique no botão "Edit" > "Add New Widget" > "Present Mode"
+<br/><br/>
+<img width="392" height="267" alt="image" src="https://github.com/user-attachments/assets/156d52c5-21d2-4168-952e-e7e4c5a3930d" />
+<br/>
+A informação "Present Mode" vai aparecer informando o modelo da janela do jogo.
+
+
 # Considerações
 O jogo pode ficar em "Hardware: Independent Flip" sem o MPO, porém ao usar overlays, o jogo despenca para o modo com mais latência, e o MPO ainda se quebra com algumas limitações técnicas, a minha recomendação é sempre deixar o MPO ligado, para que tenha muito mais chances da janela ser feita na composição "Hardware Composed: Independent Flip".<br/>
 Como regra geral:<br/>

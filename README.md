@@ -1,19 +1,25 @@
-## Sobreposição de DLSS pelo Profile Inspector
-As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jogo e até mesmo de forma global pelo Inspector usando esse XML, abaixo uma breve explicação de cada item da seção "DLSS Overrides".
+## Sobreposição de DLSS pelo NVIDIA Profile Inspector
+As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jogo e até mesmo de forma global pelo Inspector, abaixo uma breve explicação de cada item da seção "05 - Upscaling and Frame Generation".
 
-**NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation
-
-**DLSS-FG - Multi-Frame-Generation Count** -> Especifica em quantas vezes serão gerados os quadros do Frame Generation
+**NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 
 **DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele, OFF = Padrão
 
 **DLSS-FG, DLSS-RR e DLSS - Force Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS, recomendo usar a opção "Latest Preset" em todos
 
-**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos do Ray Reconstruction e Super Resolution, mesmo que o jogo não suporte.
+**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, mesmo que o jogo não tenha suporte.
 
-**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o Force Profile Mode em Custom e escolha a opção do Scaling Factor que deseja.
+**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Profile Mode" em "Custom" e escolha a opção do Scaling Ratio que deseja.
 
-## Sobreposição Global de DLSS através do driver em qualquer jogo
+**DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Fixado ou Dinâmico.
+
+**DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.
+
+**DLSS-MFG - Fixed Frame Generation Count** -> Se escolheu o modo Fixado, aqui escolhe o valor do multiplicador fixo.
+
+**DLSS-MFG - Target Dynamic Frame Rate** -> Ainda no caso escolheo modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.
+
+## Sobreposição Global de DLSS através do driver em qualquer jogo (nvidiaDlssGlom)
 ![image](https://i.imgur.com/qSoSCey.png)
 
 Veja como fazer [aqui](https://github.com/renannmp/dlssinspectorxml/blob/main/globaloverride.md)

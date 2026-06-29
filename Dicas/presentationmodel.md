@@ -28,17 +28,17 @@ No gráfico podemos ver que para atingir os modelos com menor latência, se usa 
 
 Já para jogos que utilizam do swap effect BitBlt, as otimizações DirectFlip podem fazer bem mais melhorias, quando usado em janela sem borda ou janela. Pois a partir da versão 22H2 do Windows 11, ele promove esses jogos para o modelo Flip!
 
-### DirectFlip Optimizations
+## DirectFlip Optimizations
 As otimizações DirectFlip no Windows 11 (desde a versão 22H2), são feitas quando a chave **"Otimizações para jogos em janela"** está ativada no sistema, que [promove jogos DirecX 10 e 11 do modelo BitBlt para Flip no modo janela sem borda e janela](https://support.microsoft.com/pt-BR/Windows/Hardware/Display-Graphics/optimizations-for-windowed-games-in-windows-11), e adiciona junto, suporte a VRR e AutoHDR no jogo, quando compatível.
 <br/><br/>
 <img width="958" height="301" alt="image" src="https://github.com/user-attachments/assets/0c1590b8-824a-4cdd-95e3-756514900acf" />
 <br/><br/>
 Em versões anteriores ao 22H2 do Windows 11 ou até mesmo no Windows 10, para fazer essa promoção automática, pode ser usado a [ferramenta Special K](https://wiki.special-k.info/), não recomendada para jogos online.
 
-### Multi-Plane Overlay (MPO)
+## Multi-Plane Overlay (MPO)
 Com MPO ativo, o Windows pode manter o jogo em Hardware Composed: Independent Flip e colocar um overlay desenhado por cima do jogo — Discord, Xbox Game Bar, NVIDIA overlay, notificação do sistema, captura, etc. —  em outro plano de hardware, sem derrubar o caminho principal do jogo. Ssem MPO a chance de cair de Independent Flip aumenta bastante, ainda mais com o uso de overlays, o que aumenta a latência.  
 
-### Como inspecionar o modo de apresentação
+## Como inspecionar o modo de apresentação
 Com o [PresentMon](https://game.intel.com/us/intel-presentmon/) (ou com o RTSS usando o sensor do presentmon), coloque o Preset em "Custom" e clique no botão "Edit" > "Add New Widget" > "Present Mode"
 <br/><br/>
 <img width="392" height="267" alt="image" src="https://github.com/user-attachments/assets/156d52c5-21d2-4168-952e-e7e4c5a3930d" />

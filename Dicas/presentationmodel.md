@@ -56,7 +56,7 @@ Como regra geral:<br/>
 
 ## Recomendação
 **Windows 10:** Use sempre o modo "Tela Cheia" em jogos DX10-11, nunca desative "Otimizações de tela-cheia" ou "Otimizações para jogos em janela", o Windows 10 não promove janelas sem bordas para Flip, então sempre use tela cheia, alguns overlays podem quebrar o modo Independent Flip se MPO estiver desativado.<br/>
-**Windows 11 22H2+:** Jogos em DX10 e 11 em modo janela e janela sem bordas são promovidos para modelo Flip, não tem diferença entre usar Tela-Cheia e Janela sem bordas, nunca desative as otimizações de tela-cheia e janela sem bordas, alguns overlays podem quebrar o modo Independent Flip se MPO estiver desativado.<br/><br/>
+**Windows 11 22H2+:** Jogos em DX10 e 11 em modo janela e janela sem bordas são promovidos para modelo Flip, não tem diferença entre usar Tela-Cheia e Janela sem bordas, nunca desative as otimizações de tela-cheia e otimizações de jogos em janela, alguns overlays podem quebrar o modo Independent Flip se MPO estiver desativado.<br/><br/>
 A minha recomendação é sempre deixar o MPO ligado (se for desligar o MPO por algum motivo ou limitação técnica, inspecione se o jogo está no modelo Hardware: Independent Flip, não use Overlays do Discord, etc), para que tenha muito mais chances da janela ser feita na composição "Hardware Composed: Independent Flip" e "Otimizações para jogos em janela" **SEMPRE** ativado.
 <br/><br/><br/><br/><br/>
 Fontes: [Special-K](https://www.special-k.info/) | [Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/direct3ddxgi/dxgi-flip-model)

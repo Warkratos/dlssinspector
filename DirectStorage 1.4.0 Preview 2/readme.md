@@ -16,7 +16,4 @@ Procure pelas DLLs na pasta do jogo, usando a pesquisa do Windows Explorer, faç
 
 **dstorage.dll** e **dstoragecore.dll** são as DLLs para o DirectStorage. Ambas estão disponíveis nesse aqui no repositório.
 
-
-**Repositórios Oficiais**:
-
 Repositório Microsoft DirectStorage -> [Clique aqui](https://www.nuget.org/packages/Microsoft.Direct3D.DirectStorage#versions-body-tab)

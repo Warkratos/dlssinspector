@@ -14,6 +14,7 @@ Alguns jogos que tiveram melhoria na estabilidade atualizando as DLLs do DStorag
 
 Procure pelas DLLs na pasta do jogo, usando a pesquisa do Windows Explorer, faça um backup delas renomeando para .bak e jogue as novas lá no lugar delas.
 
-**dstorage.dll** e **dstoragecore.dll** são as DLLs para o DirectStorage. Ambas estão disponíveis nesse aqui no repositório.
+**dstorage.dll** e **dstoragecore.dll** são as DLLs para o DirectStorage. Ambas estão disponíveis nesse aqui no repositório e no oficial da Microsoft.
 
+Download Direto das DLLs -> [Download](https://github.com/Warkratos/dlssinspector/raw/main/DirectStorage%201.4.0%20Preview%202/DirectStorage%201.4.0%20Preview%202.zip)  
 Repositório Microsoft DirectStorage -> [Clique aqui](https://www.nuget.org/packages/Microsoft.Direct3D.DirectStorage#versions-body-tab)

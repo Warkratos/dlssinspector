@@ -6,7 +6,7 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 
 **NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 
-**DLSS-NR, DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele.
+**DLSS-NR, DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele.  
 **DLSS-NR, DLSS-FG, DLSS-RR e DLSS - Forced Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS.
 
 **DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, quando o jogo tem DLSS mas não mostra as opções no menu.  

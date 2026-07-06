@@ -1,4 +1,4 @@
-## Descrições
+## NVIDIA Profile Inspector
 
 As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles. 
 

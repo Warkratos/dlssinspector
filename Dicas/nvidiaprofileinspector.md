@@ -6,11 +6,11 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 
 **NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 
-**DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele, OFF = Padrão  
-**DLSS-FG, DLSS-RR e DLSS - Forced Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS, recomendo usar a opção "Latest Preset" em todos  
+**DLSS-NR, DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele.
+**DLSS-NR, DLSS-FG, DLSS-RR e DLSS - Forced Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS.
 
-**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, mesmo que o jogo não tenha suporte.  
-**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Profile Mode" em "Custom" e escolha a opção do Scaling Ratio que deseja. 
+**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, quando o jogo tem DLSS mas não mostra as opções no menu.  
+**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Quality Level" em "Custom" e escolha a opção do Scaling Ratio que deseja. 
 
 **DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Fixado ou Dinâmico.  
 **DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.  

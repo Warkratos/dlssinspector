@@ -1,19 +1,45 @@
-As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jogo e até mesmo de forma global pelo Inspector, abaixo uma breve explicação de cada item da seção "05 - Upscaling and Frame Generation".
+## Descrições
+
+As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jogo e até mesmo de forma global pelo Inspector, abaixo uma breve explicação de alguns deles, use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.
 
 **NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 
-**DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele, OFF = Padrão
+**DLSS-FG, DLSS-RR e DLSS - DLL Override** -> ON = Faz com que o driver substituia a DLL do DLSS do jogo com a dele, OFF = Padrão  
+**DLSS-FG, DLSS-RR e DLSS - Force Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS, recomendo usar a opção "Latest Preset" em todos  
+**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, mesmo que o jogo não tenha suporte.  
+**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Profile Mode" em "Custom" e escolha a opção do Scaling Ratio que deseja.  
+**DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Fixado ou Dinâmico.  
+**DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.  
+**DLSS-MFG - Fixed Frame Generation Count** -> Se escolheu o modo Fixado, aqui escolhe o valor do multiplicador fixo.  
+**DLSS-MFG - Target Dynamic Frame Rate** -> Ainda no caso escolheo modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.  
 
-**DLSS-FG, DLSS-RR e DLSS - Force Preset Letter** -> Aqui é possível forçar algum preset de cada parte do DLSS, recomendo usar a opção "Latest Preset" em todos
+**Smooth Motion - Enable** -> Força o Smooth Motion ligado no perfil do jogo, mesmo que não suporte, testei com até mesmo softwares de vídeo e ele dobrou o framerate em filmes.   
 
-**DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, mesmo que o jogo não tenha suporte.
+**Sharpening - Ignore Film Grain** -> É o ajuste do denoising do filtro de nitidez antigo da NVIDIA, que prefiro mais que o novo, infelizmente esse filtro não está mais acessível no NVIDIA App nem no Control Panel antigo, mas por aqui da pra ativar normalmente, recomendo valor 0.27.  
+**Sharpening - Value** -> Essa é a flag que controla a força do filtro de nitidez, recomendo entre 0.05 até 0.15. Configure essas flags por perfil de jogo caso prefira.  
+**Sharpening Filter - Enabled** -> On ativa o filtro, Off desativa.  
 
-**DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Profile Mode" em "Custom" e escolha a opção do Scaling Ratio que deseja.
+## Recomendações para o perfil Global:  
+Todos os DLSS DLL Override -> On  
+DLSS - Forced Model Preset Profile -> Custom  
+NVIDIA Ansel - Enabled (modo foto da NVIDIA) -> Off
 
-**DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Fixado ou Dinâmico.
+**RTX 40-50:**  
+DLSS - Forced Preset Letter -> Preset M  
+DLSS-FG - Forced Preset Letter -> Preset B  
+DLSS-RR - Forced Preset Letter -> Preset E ou D
 
-**DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.
+**RTX 20-30:**  
+DLSS - Forced Preset Letter -> Preset K  
+DLSS-FG - Forced Preset Letter -> Preset B  
+DLSS-RR - Forced Preset Letter -> Preset E ou D  
 
-**DLSS-MFG - Fixed Frame Generation Count** -> Se escolheu o modo Fixado, aqui escolhe o valor do multiplicador fixo.
+**Monitores com G-SYNC/Variable Refresh Rate/Adaptive Sync:**  
+Vertical Sync -> Force On  
+Maximum Pre-rendered Frames -> 1  
+Ultra Low-Latency - Enabled -> On
 
-**DLSS-MFG - Target Dynamic Frame Rate** -> Ainda no caso escolheo modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.
+**Extra - RivaTuner Statistics Server:** Se tiver o RTSS instalado na máquina, deixe o "Ultra Low-Latency - Enabled" em **OFF** e nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, recomendo também alterar o **"Frame calculation point"** para **"Frame presentation"**, como na imagem abaixo.  
+<img width="387" height="619" alt="HFAqzVuXkAAQY26" src="https://github.com/user-attachments/assets/45ccf940-22ca-431f-8684-dd0be2937631" />  
+
+Depois de configurado o RTSS dessa forma volte ao menu inicial do RTSS, clique com o botão direito na caixa "Framerate Limit" e escolha "VRR limit"  

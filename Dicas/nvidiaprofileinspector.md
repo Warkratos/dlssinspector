@@ -1,6 +1,6 @@
 ## Descrições
 
-As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jogo e até mesmo de forma global pelo Inspector, abaixo uma breve explicação de alguns deles, use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.
+As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles, abaixo uma breve explicação de alguns deles, use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.
 
 **NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 
@@ -18,6 +18,9 @@ As funcionalidades adicionadas ao NVIDIA App podem ser forçadas em qualquer jog
 **Sharpening - Ignore Film Grain** -> É o ajuste do denoising do filtro de nitidez antigo da NVIDIA, que prefiro mais que o novo, infelizmente esse filtro não está mais acessível no NVIDIA App nem no Control Panel antigo, mas por aqui da pra ativar normalmente, recomendo valor 0.27.  
 **Sharpening - Value** -> Essa é a flag que controla a força do filtro de nitidez, recomendo entre 0.05 até 0.15. Configure essas flags por perfil de jogo caso prefira.  
 **Sharpening Filter - Enabled** -> On ativa o filtro, Off desativa.  
+
+**rBAR - Enable** -> Força o Resizable Bar ligado para o jogo, grande parte dos jogos se beneficiam disso, jogos que foram testados pela NVIDIA ficam desabilitados por padrão, mesmo alterando isso no perfil global.  
+**rBAR - Size Limit** -> A maioria dos jogos aprovados pela NVIDIA usam esse valor em 1GB, **alguns jogos podem** se beneficiar em aumentar isso para o valor total da VRAM instalada na máquina.  
 
 ## Recomendações para o perfil Global:  
 Todos os DLSS DLL Override -> On  

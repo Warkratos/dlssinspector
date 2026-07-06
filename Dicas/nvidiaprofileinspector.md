@@ -1,6 +1,8 @@
 ## Descrições
 
-As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles, abaixo uma breve explicação de alguns deles, use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.
+As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles. 
+
+**Use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.**
 
 **NOTA:** SR = Super Resolution | RR = Ray Reconstruction | FG = Frame Generation | MFG = Multi-Frame Generation | NR = Neural Rendering
 

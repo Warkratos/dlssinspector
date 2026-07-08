@@ -23,7 +23,7 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 **Sharpening - Value** -> Essa é a flag que controla a força do filtro de nitidez, recomendo entre 0.05 até 0.15. Configure essas flags por perfil de jogo caso prefira.  
 **Sharpening Filter - Enabled** -> On ativa o filtro, Off desativa.  
 
-**rBAR - Enable** -> Força o Resizable Bar ligado para o jogo, grande parte dos jogos se beneficiam disso, jogos que foram testados pela NVIDIA ficam desabilitados por padrão, mesmo alterando isso no perfil global.  
+**rBAR - Enable** -> Essa flag força o Resizable Bar ligado para o jogo, boa parte dos jogos se beneficiam disso. Se forçar no perfil global, os jogos que foram testados pela NVIDIA e apresentaram problemas com rBAR ficarão desabilitados por padrão no perfil do jogo (ex: Battlefield 6) que tem prioridade em cima do perfil global, esse seria o caminho inverso ao padrão do driver que é habilitar apenas para jogos aprovados.  
 **rBAR - Size Limit** -> A maioria dos jogos aprovados pela NVIDIA usam esse valor em 1GB, **alguns jogos podem** se beneficiar em aumentar isso para o valor total da VRAM instalada na máquina.  
 
 ## Recomendações para o perfil Global:  
@@ -46,7 +46,7 @@ Vertical Sync -> Force On
 Maximum Pre-rendered Frames -> 1  
 Ultra Low-Latency - Enabled -> On
 
-**Extra - RivaTuner Statistics Server:** Se tiver o RTSS instalado na máquina, deixe o "Ultra Low-Latency - Enabled" em **OFF** e nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, recomendo também alterar o **"Frame calculation point"** para **"Frame presentation"**, como na imagem abaixo.  
+**Extra - RivaTuner Statistics Server:** Se tiver o RTSS instalado na máquina, deixe o "Ultra Low-Latency - Enabled" em **OFF** e nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, recomendo também alterar o **"Frametime calculation point"** para **"Frame presentation"**, como na imagem abaixo.  
 <img width="387" height="619" alt="HFAqzVuXkAAQY26" src="https://github.com/user-attachments/assets/45ccf940-22ca-431f-8684-dd0be2937631" />  
 
 Depois de configurado o RTSS dessa forma volte ao menu inicial do RTSS, clique com o botão direito na caixa "Framerate Limit" e escolha "VRR limit"  

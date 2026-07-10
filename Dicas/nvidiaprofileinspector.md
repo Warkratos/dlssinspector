@@ -12,7 +12,7 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 **DLSS-RR e DLSS - Forced Quality Level** -> Possibilita forçar e fixar os modos de qualidade do Ray Reconstruction e Super Resolution, quando o jogo tem DLSS mas não mostra as opções no menu.  
 **DLSS e DLSS-RR - Forced Scaling Ratio** -> Customiza a porcentagem de escalonamento do DLSS. Para ativar a funcionalidade, coloque o "Forced Quality Level" em "Custom" e escolha a opção do Scaling Ratio que deseja. 
 
-**DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Fixado ou Dinâmico.  
+**DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Desligado, Fixado ou Dinâmico.  
 **DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.  
 **DLSS-MFG - Fixed Frame Generation Count** -> Se escolheu o modo Fixado, aqui escolhe o valor do multiplicador fixo.  
 **DLSS-MFG - Target Dynamic Frame Rate** -> Ainda no caso escolheo modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.  

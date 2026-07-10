@@ -15,7 +15,7 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 **DLSS-FG - Forced Mode** -> Escolhe o modo do Frame Generation, Desligado, Fixado ou Dinâmico.  
 **DLSS-MFG - Dynamic Frame Generation Count** -> Se escolheu o modo Dinâmico, aqui você escolhe o valor máximo que o multiplicador pode chegar.  
 **DLSS-MFG - Fixed Frame Generation Count** -> Se escolheu o modo Fixado, aqui escolhe o valor do multiplicador fixo.  
-**DLSS-MFG - Target Dynamic Frame Rate** -> Ainda no caso escolheo modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.  
+**DLSS-MFG - Target Dynamic Frame Rate** -> Ainda se escolheu o modo Dinâmico, aqui escolhe o Alvo desejado de Framerate, "Max Refresh Rate" escolhe com base na taxa de atualização do monitor, ou escolha um alvo de FPS desejado.  
 
 **Smooth Motion - Enable** -> Força o Smooth Motion ligado no perfil do jogo, mesmo que não suporte, testei com até mesmo softwares de vídeo e ele dobrou o framerate em filmes.   
 

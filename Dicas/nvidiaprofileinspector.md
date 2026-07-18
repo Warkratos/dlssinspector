@@ -1,4 +1,4 @@
-## NVIDIA Profile Inspector
+## NVIDIA Profile Inspector Flags
 
 As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles. 
 
@@ -34,19 +34,18 @@ NVIDIA Ansel - Enabled (modo foto da NVIDIA) -> Off
 **RTX 40-50:**  
 DLSS - Forced Preset Letter -> Preset M  
 DLSS-FG - Forced Preset Letter -> Preset B  
-DLSS-RR - Forced Preset Letter -> Preset E ou D
+DLSS-RR - Forced Preset Letter -> Usar preset recomendado
 
 **RTX 20-30:**  
-DLSS - Forced Preset Letter -> Preset K  
-DLSS-FG - Forced Preset Letter -> Preset B  
-DLSS-RR - Forced Preset Letter -> Preset E ou D  
+DLSS - Forced Preset Letter -> Preset K    
+DLSS-RR - Forced Preset Letter -> Usar preset recomendado  
 
 **Monitores com G-SYNC/Variable Refresh Rate/Adaptive Sync:**  
 Vertical Sync -> Force On  
 Maximum Pre-rendered Frames -> 1  
 Ultra Low-Latency - Enabled -> On
 
-**OPCIONAL EXTRA - RivaTuner Statistics Server (RTSS):** Se tiver o RTSS instalado na máquina, nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, recomendo também alterar o **"Frametime calculation point"** para **"Frame presentation"**, como na imagem abaixo. O NVIDIA reflex tem prioridade e sobrepõe configurações de baixa latência do NVIDIA App e NVIDIA Profile Inspector quando forçado pelo RTSS ou disponível dentro do jogo.    
+**OPCIONAL - RivaTuner Statistics Server (RTSS):** Se tiver o RTSS instalado na máquina, nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, recomendo também alterar o **"Frametime calculation point"** para **"Frame presentation"**, como na imagem abaixo. O NVIDIA reflex tem prioridade e sobrepõe configurações de baixa latência do NVIDIA App e NVIDIA Profile Inspector quando forçado pelo RTSS ou disponível dentro do jogo.    
 <img width="387" height="619" alt="HFAqzVuXkAAQY26" src="https://github.com/user-attachments/assets/45ccf940-22ca-431f-8684-dd0be2937631" />  
 
 Depois de configurado o RTSS dessa forma volte ao menu inicial do RTSS, clique com o botão direito na caixa "Framerate Limit" e escolha "VRR limit"  

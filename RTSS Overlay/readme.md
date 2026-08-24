@@ -4,4 +4,4 @@
 
 Arquivo .ovx usado para importar no OverlayEditor do RTSS, use a opção "Layouts", depois "Import" e selecione o arquivo .ovx
 
-**Importante:** Requer no mínimo a versão 7.3.8 Beta 1 para funcionamento correto, pois utiliza o novo sensor "PC Latency".
+**Importante:** Requer no mínimo a versão 7.3.8 Beta 1 para funcionamento correto, pois utiliza o novo sensor "PC Latency", as métricas de Average e de 1% Low aparecem somente no quando o modo benchmark é ativado.

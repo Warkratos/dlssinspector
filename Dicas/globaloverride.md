@@ -7,7 +7,8 @@ Roda de forma portátil, ou seja, não requer instalação, ela substitui as DLL
 
 ## Como usar
 
-Baixe a última versão dessa ferramenta (nvidiaDlssGlom.exe) no repositório do desenvolvedor -> https://github.com/SimonMacer/AnWave/releases/tag/AnWave-DLSS
+Baixe a última versão dessa ferramenta (nvidiaDlssGlom.exe) no repositório do desenvolvedor 
+https://github.com/SimonMacer/AnWave/releases/tag/AnWave-DLSS
 
 
 <img width="402" height="705" alt="image" src="https://github.com/user-attachments/assets/ea426fcc-072e-499e-8bea-888c240abbe7" />

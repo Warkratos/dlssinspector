@@ -1,6 +1,6 @@
 # Global Driver Streamline DLLs Override
 
-Essa ferramenta faz a substituição das DLLs do Frame Generation, Super Resolution e Ray Reconstruction de forma global no sistema, e não só isso, ela também atualiza as DLLs Streamline (quando suportado pelo jogo) que incluem: NVIDIA Reflex, Multi-Frame-Generation. Com isso, é possivel usar MFG em jogos que até não tinham suporte a ele, mas tinha o Frame Generation 1X.
+Essa ferramenta faz a substituição das DLLs do Frame Generation, Super Resolution, Ray Reconstruction e Streamline de forma global no sistema.
 
 
 Roda de forma portátil, ou seja, não requer instalação, ela substitui as DLLs na pasta ProgramData\NVIDIA\NGX, fazendo o driver carregar elas nos jogos.

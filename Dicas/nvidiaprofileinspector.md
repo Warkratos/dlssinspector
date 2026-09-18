@@ -1,5 +1,7 @@
 ## NVIDIA Profile Inspector Flags
 
+O NVIDIA Profile Inspector é uma alternativa do NVIDIA App, ambos acessam a mesma API pública da NVIDIA (NVAPI) e podem ser usados pra configurar perfis de jogos, com o Profile Inspector tudo pode ser forçado pra fazer testes em jogos mesmo que não suportados pela NVIDIA.
+
 As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer jogo mesmo que não ofereça suporte no NVIDIA App**, bom para quem quer testar configurações neles. 
 
 **Use o campo de pesquisa do NVIDIA Profile Inspector caso não consiga encontrar alguma.**

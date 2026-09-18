@@ -4,7 +4,7 @@
 
 Arquivo .ovx usado para importar no OverlayEditor do RTSS, use a opção "Layouts", depois "Import" e selecione o arquivo .ovx
 
-Existem 2 versões, uma utiliza dos sensores LatencyMon embutidos no RTSS pra apresentar o PC Latency e o Present Mode, e o outro usa somente os sensores nativos do RTSS.
+Fiz 2 versões, uma utiliza dos sensores LatencyMon embutidos no RTSS pra apresentar o PC Latency e o Present Mode, e o outro usa somente os sensores nativos do RTSS.
 
 Versão sem LatencyMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv2NoLatencyMon.ovx)
 

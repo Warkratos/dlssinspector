@@ -6,4 +6,8 @@ Arquivo .ovx usado para importar no OverlayEditor do RTSS, use a opção "Layout
 
 Existem 2 versões, uma utiliza dos sensores LatencyMon embutidos no RTSS pra apresentar o PC Latency e o Present Mode, e o outro usa somente os sensores nativos do RTSS.
 
+Versão sem LatencyMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv2NoLatencyMon.ovx)
+
+Versão com LatencyMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv2.ovl)
+
 **Importante:** A versão LatencyMon requer no mínimo a versão 7.3.8 Beta 1 para funcionamento correto, pois utiliza o novo sensor "PC Latency", as métricas de "FPS Average" e de "FPS 1% Low" aparecem somente no quando o modo benchmark é ativado.

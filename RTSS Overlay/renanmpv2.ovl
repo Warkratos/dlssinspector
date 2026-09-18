@@ -1,0 +1,523 @@
+[Master]
+Implementation=2
+FontFace=NVIDIA Sans Medium
+FontHeight=-9
+FontWeight=500
+ZoomRatio=2
+[Settings]
+Name=renanmp
+EnvVars=
+RefreshPeriod=1000
+LockUserSettings=0
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=16
+Tables=1
+Layers=41
+[Source0]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source1]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source2]
+Name=RAM usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage
+[Source3]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source4]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source5]
+Name=GPU1 memory usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source6]
+Name=GPU1 memory temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory temperature
+[Source7]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source8]
+Name=GPU1 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 clock
+[Source9]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source10]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source11]
+Name=IsBenchmarkActive
+Units=
+Format=
+Formula=(rtssflags & 0x100) != 0
+Provider=HAL
+ID=Stub
+[Source12]
+Name=IsPresentModeAvailable
+Units=
+Format=
+Formula=validate(PresentMode)
+Provider=HAL
+ID=Stub
+[Source13]
+Name=PresentMode
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=PresentMode
+[Source14]
+Name=PCLatency
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=PCLatency
+[Source15]
+Name=Status
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=Status
+[Table0]
+Name=
+Lines=0
+[Layer0]
+Name=Background
+Text=
+PositionX=-1
+PositionY=-1
+ExtentX=-27
+ExtentY=-10
+ExtentOrigin=0
+BgndColor=80000000
+[Layer1]
+Name=Frametime graph
+Text=<G=Frametime,0,0,1,0,100,0>
+PositionX=-1
+PositionY=-7
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=FF00
+[Layer2]
+Name=D3D Info
+Text=<API>
+PositionX=-1
+PositionY=-6
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer3]
+Name=Frametime
+Text=<FT> ms
+PositionX=-23
+PositionY=-7
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+[Layer4]
+Name=FPS Info
+Text=<FR>
+PositionX=-9
+PositionY=-6
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+[Layer5]
+Name=FPS Caption
+Text=FPS
+PositionX=-13
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer6]
+Name=RAM Info
+Text=%RAM% RAM
+PositionX=-1
+PositionY=-4
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=ED1C24
+[Layer7]
+Name=VRAM Info
+Text=%VRAM% VRAM
+PositionX=-1
+PositionY=-3
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900
+[Layer8]
+Name=CPU Info
+Text=%CPUShort%
+PositionX=-1
+PositionY=-2
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=ED1C24
+[Layer9]
+Name=GPU Info
+Text=%GPU%
+PositionX=-1
+PositionY=-1
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900
+[Layer10]
+Name=RAM Usage Info
+Text=%RAM usage%
+PositionX=-14
+PositionY=-4
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer11]
+Name=VRAM Usage Info
+Text=%GPU1 memory usage%
+PositionX=-14
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer12]
+Name=CPU Usage Info
+Text=%CPU usage%
+PositionX=-9
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8040,95,(CPU usage,0)
+[Layer13]
+Name=GPU Usage Info
+Text=%GPU1 usage%
+PositionX=-9
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8000,95,(GPU1 usage,0)
+[Layer14]
+Name=Mini GB Caption
+Text=GB
+PositionX=-18
+PositionY=-4
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer15]
+Name=Mini GB Caption
+Text=GB
+PositionX=-18
+PositionY=-3
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer16]
+Name=GPU Temperature Info
+Text=%GPU1 temperature%
+PositionX=-19
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,84,FF8000,85,(GPU1 temperature,0)
+[Layer17]
+Name=CPU Temperature Info
+Text=%CPU temperature%
+PositionX=-19
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
+[Layer18]
+Name=Present Mode Info
+VisibilitySource=IsPresentModeAvailable
+Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
+PositionX=-10
+PositionY=-9
+ExtentX=-14
+ExtentY=-1
+ExtentOrigin=0
+TextColor=B19E9E
+[Layer19]
+Name=Present Mode Caption
+VisibilitySource=IsPresentModeAvailable
+Text=Present
+PositionX=-1
+PositionY=-9
+ExtentX=-5
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900
+[Layer20]
+Name=PC Latency Caption
+Text=PC Latency
+PositionX=-1
+PositionY=-5
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8040
+[Layer21]
+Name=PCL Info
+Text=<IF %Status% == 0>%PCLatency%<ELSE>NaN<ENDIF>
+PositionX=-9
+PositionY=-5
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer22]
+Name=ms Caption
+Text=ms
+PositionX=-13
+PositionY=-5
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer23]
+Name=VRAM Temperature Info
+Text=%GPU1 memory temperature%
+PositionX=-19
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,74,FF8000,75,(GPU1 memory temperature,0)
+[Layer24]
+Name=Mini Celsius Caption
+Text=°C
+PositionX=-23
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer25]
+Name=Mini Celsius Caption
+Text=°C
+PositionX=-23
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer26]
+Name=Mini Celsius Caption
+Text=°C
+PositionX=-23
+PositionY=-3
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer27]
+Name=Mini Percent Caption
+Text=%
+PositionX=-13
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer28]
+Name=Mini Percent Caption
+Text=%
+PositionX=-13
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer29]
+Name=GPU Clock Info
+Text=%GPU1 clock%
+PositionX=-14
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer30]
+Name=CPU Clock Info
+Text=%CPU clock%
+PositionX=-14
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer31]
+Name=VRAM Percentage Info
+Text=%GPU1 memory usage percent%
+PositionX=-9
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8000,95,(GPU1 memory usage percent,0)
+[Layer32]
+Name=Mini Percent Caption
+Text=%
+PositionX=-13
+PositionY=-3
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer33]
+Name=RAM Percentage Info
+Text=%RAM usage percent%
+PositionX=-9
+PositionY=-4
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8000,95,(RAM usage percent,0)
+[Layer34]
+Name=Mini Percent Caption
+Text=%
+PositionX=-13
+PositionY=-4
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer35]
+Name=Mini Mhz Caption
+Text=Mhz
+PositionX=-18
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer36]
+Name=Mini Mhz Caption
+Text=Mhz
+PositionX=-18
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer37]
+Name=FPS AVG Info
+VisibilitySource=IsBenchmarkActive
+Text=%Framerate Avg%
+PositionX=-14
+PositionY=-6
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+[Layer38]
+Name=FPS 1%Low Info
+VisibilitySource=IsBenchmarkActive
+Text=%Framerate 1% Low%
+PositionX=-19
+PositionY=-6
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+[Layer39]
+Name=AVG Caption
+VisibilitySource=IsBenchmarkActive
+Text=Avg
+PositionX=-18
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer40]
+Name=1%Low Caption
+VisibilitySource=IsBenchmarkActive
+Text=1%
+PositionX=-23
+PositionY=-6
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E

@@ -11,5 +11,6 @@ Nessa versão, as métricas de "FPS Average" e de "FPS 1% Low" aparecem somente 
 
 ## Versão com PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv2PM.ovx)
 
-<img width="359" height="222" alt="Captura de tela 2026-10-17 222701" src="https://github.com/user-attachments/assets/c2f76628-a0c4-4ad9-9b70-db8db12e9363" />><br/>
+<img width="359" height="222" alt="Captura de tela 2026-10-17 222701" src="https://github.com/user-attachments/assets/c2f76628-a0c4-4ad9-9b70-db8db12e9363" /><br/>
+Nessa versão os frames são apresentados em Display Time, melhores para o uso de Frame Gen.<br/>
 **Importante:** A versão PresentMon requer no mínimo a versão 7.3.8 Beta 1 para funcionamento correto, pois utiliza o novo sensor "PC Latency".

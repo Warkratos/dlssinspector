@@ -12,9 +12,9 @@ LockUserSettings=0
 EmbeddedImage=
 PingAddr=
 [General]
-Sources=22
+Sources=24
 Tables=1
-Layers=48
+Layers=50
 [Source0]
 Name=CPU temperature
 Units=°C
@@ -107,74 +107,88 @@ Formula=1000/percentile(msBetweenPresents,99.9)
 Provider=HAL
 ID=Stub
 [Source13]
+Name=IsGpuLimited
+Units=
+Format=
+Formula=(msGpuActive / msBetweenPresents) >= 0.75
+Provider=HAL
+ID=Stub
+[Source14]
 Name=IsPresentMonDataAvailable
 Units=
 Format=
 Formula=validate(x)
 Provider=PresentMon
 ID=msBetweenPresents
-[Source14]
+[Source15]
 Name=PresentMode
 Units=
 Format=
 Formula=
 Provider=PresentMon
 ID=PresentMode
-[Source15]
+[Source16]
 Name=PCLatency
 Units=ms
 Format=
 Formula=
 Provider=PresentMon
 ID=PCLatency
-[Source16]
+[Source17]
 Name=Status
 Units=
 Format=
 Formula=
 Provider=PresentMon
 ID=Status
-[Source17]
+[Source18]
 Name=msBetweenDisplayChange
 Units=ms
 Format=
 Formula=
 Provider=PresentMon
 ID=msBetweenDisplayChange
-[Source18]
+[Source19]
 Name=FramerateDisplayed
 Units=FPS
 Format=
 Formula=
 Provider=PresentMon
 ID=FramerateDisplayed
-[Source19]
+[Source20]
 Name=IsPresentToPresent
 Units=
 Format=
 Formula=(key(0x46) & 1) == 0
 Provider=PresentMon
 ID=msBetweenPresents
-[Source20]
+[Source21]
 Name=CPUFrametime
 Units=ms
 Format=
 Formula=
 Provider=PresentMon
 ID=CPUFrametime
-[Source21]
+[Source22]
 Name=msBetweenPresents
 Units=ms
 Format=
 Formula=
 Provider=PresentMon
 ID=msBetweenPresents
+[Source23]
+Name=msGpuActive
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msGpuActive
 [Table0]
 Name=
 Lines=0
 [Layer0]
 Name=Background
-Text=<SWITCH Status><CASE 0><IF !IsPresentMonDataAvailable>Waiting for PresentMon data stream...<IF><CASE 1>PresentMon service is not available...<CASE 2>Failed to start PresentMon data stream...<CASE 3>PresentMon data stream failed...
+Text=<SWITCH Status><CASE 0><IF !IsPresentMonDataAvailable>Loading PresentMon data stream...<IF><CASE 1>PresentMon service is not available...<CASE 2>Failed to start PresentMon data stream...<CASE 3>PresentMon data stream failed...
 PositionX=-1
 PositionY=-1
 ExtentX=-27
@@ -347,7 +361,7 @@ ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
 [Layer17]
-Name=Present Mode Info
+Name=Presentation Mode Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
 PositionX=-12
@@ -357,7 +371,7 @@ ExtentY=-1
 ExtentOrigin=0
 TextColor=B19E9E
 [Layer18]
-Name=Present Mode Caption
+Name=Presentation Mode Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=Presentation
 PositionX=-1
@@ -610,7 +624,7 @@ ExtentY=-2
 ExtentOrigin=0
 TextColor=8000
 [Layer42]
-Name=IsPresent
+Name=Frametime in Present Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Present
 PositionX=-23
@@ -653,7 +667,7 @@ Size=70
 TextColor=B19E9E
 RefreshPeriod=500
 [Layer46]
-Name=IsPresent
+Name=Frametime in Display Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Display
 PositionX=-23
@@ -667,9 +681,30 @@ TextColor=B19E9E
 Name=Driver Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Driver %Driver%
-PositionX=-10
+PositionX=-16
 PositionY=-12
 ExtentX=0
 ExtentY=0
 ExtentOrigin=0
 TextColor=76B900
+[Layer48]
+Name=LimitedBy Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
+PositionX=-3
+PositionY=-12
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=76B900
+[Layer49]
+Name=Present Mode Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent>Present-to-Present<ELSE>Start-to-Start
+PositionX=-1
+PositionY=-7
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E

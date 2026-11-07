@@ -12,9 +12,9 @@ LockUserSettings=0
 EmbeddedImage=
 PingAddr=
 [General]
-Sources=20
+Sources=22
 Tables=1
-Layers=43
+Layers=47
 [Source0]
 Name=CPU temperature
 Units=°C
@@ -155,6 +155,20 @@ Format=
 Formula=(key(0x46) & 1) == 0
 Provider=PresentMon
 ID=msBetweenPresents
+[Source20]
+Name=CPUFrametime
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=CPUFrametime
+[Source21]
+Name=msBetweenPresents
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msBetweenPresents
 [Table0]
 Name=
 Lines=0
@@ -164,7 +178,7 @@ Text=<SWITCH Status><CASE 0><IF !IsPresentMonDataAvailable>Waiting for PresentMo
 PositionX=-1
 PositionY=-1
 ExtentX=-27
-ExtentY=-9
+ExtentY=-13
 ExtentOrigin=4
 BgndColor=80000000
 [Layer1]
@@ -336,8 +350,8 @@ TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
 Name=Present Mode Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
-PositionX=-12
-PositionY=-9
+PositionX=-11
+PositionY=-13
 ExtentX=-14
 ExtentY=-1
 ExtentOrigin=0
@@ -347,7 +361,7 @@ Name=Present Mode Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=Presentation
 PositionX=-1
-PositionY=-9
+PositionY=-13
 ExtentX=-5
 ExtentY=-1
 ExtentOrigin=0
@@ -536,14 +550,13 @@ TextColor=B19E9E
 [Layer36]
 Name=FPS Display Info
 VisibilitySource=IsPresentMonDataAvailable
-Text=%FramerateDisplayed%
+Text=<FR>
 PositionX=-9
 PositionY=-6
 ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=500
 [Layer37]
 Name=FPS 0.1%Low Info
 VisibilitySource=IsPresentMonDataAvailable
@@ -554,7 +567,6 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=500
 [Layer38]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
@@ -576,7 +588,6 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=500
 [Layer40]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
@@ -602,6 +613,49 @@ TextColor=FF00
 Name=IsPresent
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent>P-T-P<ELSE>S-T-S
+PositionX=-23
+PositionY=-11
+ExtentX=-2
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+[Layer43]
+Name=CPU Frametime and Preset Graph
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,0><ELSE><G=CPUFrametime,0,0,1,0,50,0>
+PositionX=-1
+PositionY=-10
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=FF00
+[Layer44]
+Name=CPU Frametime and Present Graph Fill
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,1><ELSE><G=CPUFrametime,0,0,1,0,50,1>
+PositionX=-1
+PositionY=-10
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=FF00
+[Layer45]
+Name=Frametime Displayed
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent>%msBetweenPresents% ms <ELSE>%CPUFrametime% ms
+PositionX=-23
+PositionY=-10
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+RefreshPeriod=500
+[Layer46]
+Name=IsPresent
+VisibilitySource=IsPresentMonDataAvailable
+Text=Display
 PositionX=-23
 PositionY=-8
 ExtentX=0

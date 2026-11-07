@@ -608,7 +608,7 @@ PositionY=-7
 ExtentX=-22
 ExtentY=-2
 ExtentOrigin=0
-TextColor=FF00
+TextColor=8000
 [Layer42]
 Name=IsPresent
 VisibilitySource=IsPresentMonDataAvailable
@@ -639,7 +639,7 @@ PositionY=-10
 ExtentX=-22
 ExtentY=-2
 ExtentOrigin=0
-TextColor=FF00
+TextColor=8000
 [Layer45]
 Name=Frametime Displayed
 VisibilitySource=IsPresentMonDataAvailable

@@ -7,7 +7,7 @@ Arquivo .ovx usado para importar no OverlayEditor do RTSS, use a opção "Layout
 ## Versão sem PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv3.ovl)
 
 <img width="363" height="169" alt="Captura de tela 2026-10-17 222748" src="https://github.com/user-attachments/assets/7f938211-a944-4810-943a-794a09acaa83" /><br/>
-Nessa versão, as métricas de "FPS Average" e de "FPS 1% Low" aparecem somente no quando o modo benchmark é ativado.
+Nessa versão, as métricas de "FPS Average", "FPS 1% Low" e "FPS 0.1% Low" aparecem somente no quando o modo benchmark é ativado.
 
 ## Versão com PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv3PM.ovl)
 

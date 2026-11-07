@@ -1,8 +1,8 @@
 # Overlay Preview
 
-Fiz 2 versões, uma utiliza dos sensores PresentMon embutidos no RTSS pra apresentar o PC Latency, Present Mode e estatísticas de Display Time que são ideais para Frame Gen, e o outro usa somente os sensores nativos do RTSS.
+Fiz 2 versões, uma utiliza dos sensores PresentMon embutidos no RTSS pra apresentar o PC Latency, Present Mode e estatísticas de Frametime em Display Time que são ideais para Frame Gen, e o outro usa somente os sensores nativos do RTSS.
 
-Arquivo .ovx usado para importar no OverlayEditor do RTSS, use a opção "Layouts", depois "Import" e selecione o arquivo .ovx
+Arquivo .ovl pra colocar na pasta "..\RivaTuner Statistics Server\Plugins\Client\Overlays"
 
 ## Versão sem PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv3.ovl)
 

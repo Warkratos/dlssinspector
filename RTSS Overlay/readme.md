@@ -11,5 +11,10 @@ Nessa versão, as métricas de "FPS Average", "FPS 1% Low" e "FPS 0.1% Low" apar
 
 ## Versão com dados do PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv3PM.ovl)
 
-<img width="345" height="293" alt="image" src="https://github.com/user-attachments/assets/ed8fbf94-09b6-4e44-894f-e06b7056e3d5" /><br/>
+<img width="348" height="297" alt="image" src="https://github.com/user-attachments/assets/cbcc88ef-830d-4f68-9f95-9ef5d3f7842e" /><br/>
+
+Funcionalidades dessa versão: 
+- Mostra o frametime em "msBetweenPresent" e "msBetweenDisplayChange", a versão Present mostra o cálculo em tempo real se está em "Start-to-Start" (novo) ou "Present-to-Present".
+- Mostra o tipo de presentation model utilizado pelo jogo atualmente, veja mais sobre os modelos de apresentação e porque é recomendado ficar no "Independent Flip" [clicando aqui](https://github.com/Warkratos/dlssinspector/blob/main/Dicas/presentationmodel.md)
+- Mostra se está sendo limitado pela GPU ou CPU (gargalo).<br/><br/>
 **Importante:** Instale ao menos a versão 7.3.8 do RTSS para funcionamento correto, pois utiliza o novo dado "PC Latency" do PresentMon embutido no RTSS.

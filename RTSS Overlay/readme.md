@@ -13,7 +13,7 @@ Nessa versão, as métricas de "FPS Average", "FPS 1% Low" e "FPS 0.1% Low" apar
 
 <img width="330" height="328" alt="image" src="https://github.com/user-attachments/assets/d77f2450-f67f-4e12-9172-60ff6ceb31ca" /><br/>
 Funcionalidades dessa versão: 
-- Mostra o frametime em "msBetweenPresent" e "msBetweenDisplayChange", a versão Present mostra o cálculo em tempo real e informa se está em "Start-to-Start" ou "Present-to-Present", para alterar o modo pressiona a tecla 'F', precisa do "HotkeyHandler.dll" ativo nos plugins do RTSS.
+- Mostra o frametime em "msBetweenPresent" e "msBetweenDisplayChange", a versão Present mostra o cálculo em tempo real e informa se está em "Start-to-Start" ou "Present-to-Present", para alternar o modo pressione a tecla 'F', precisa do "HotkeyHandler.dll" ativo nos plugins do RTSS.
 - Mostra o tipo de presentation model utilizado pelo jogo atualmente, veja mais sobre os modelos de apresentação e porque é recomendado ficar no "Independent Flip" [clicando aqui](https://github.com/Warkratos/dlssinspector/blob/main/Dicas/presentationmodel.md)
 - Mostra se está sendo limitado pela GPU ou CPU (gargalo).<br/><br/>
 **Importante:** Instale ao menos a versão 7.3.8 do RTSS para funcionamento correto, pois utiliza o novo dado "PC Latency" do PresentMon embutido no RTSS.

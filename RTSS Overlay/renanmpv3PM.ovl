@@ -14,7 +14,7 @@ PingAddr=
 [General]
 Sources=24
 Tables=1
-Layers=50
+Layers=49
 [Source0]
 Name=CPU temperature
 Units=°C
@@ -192,9 +192,9 @@ Text=<SWITCH Status><CASE 0><IF !IsPresentMonDataAvailable>Loading PresentMon da
 PositionX=-1
 PositionY=-1
 ExtentX=-27
-ExtentY=-12
+ExtentY=-14
 ExtentOrigin=4
-BgndColor=80000000
+BgndColor=B4000000
 [Layer1]
 Name=Displayed Frametime Graph
 VisibilitySource=IsPresentMonDataAvailable
@@ -231,8 +231,8 @@ RefreshPeriod=500
 Name=FPS Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=FPS
-PositionX=-13
-PositionY=-6
+PositionX=-16
+PositionY=-13
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
@@ -364,33 +364,23 @@ TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
 Name=Presentation Mode Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
-PositionX=-12
-PositionY=-11
-ExtentX=-14
+PositionX=-9
+PositionY=-6
+ExtentX=-18
 ExtentY=-1
-ExtentOrigin=0
+ExtentOrigin=4
 TextColor=B19E9E
 [Layer18]
-Name=Presentation Mode Caption
-VisibilitySource=IsPresentMonDataAvailable
-Text=Presentation
-PositionX=-1
-PositionY=-11
-ExtentX=-5
-ExtentY=-1
-ExtentOrigin=0
-TextColor=76B900
-[Layer19]
 Name=PC Latency Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=PC Latency
 PositionX=-1
 PositionY=-5
-ExtentX=-8
+ExtentX=-6
 ExtentY=-1
 ExtentOrigin=0
 TextColor=FF8040
-[Layer20]
+[Layer19]
 Name=PCL Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%PCLatency%
@@ -401,7 +391,7 @@ ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E
 RefreshPeriod=500
-[Layer21]
+[Layer20]
 Name=ms Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=ms
@@ -412,7 +402,7 @@ ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer22]
+[Layer21]
 Name=VRAM Temperature Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%GPU1 memory temperature%
@@ -422,12 +412,23 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E,,74,FF8000,75,(GPU1 memory temperature,0)
-[Layer23]
+[Layer22]
 Name=Mini Celsius Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=°C
 PositionX=-23
 PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer23]
+Name=Mini Celsius Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=°C
+PositionX=-23
+PositionY=-2
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
@@ -438,18 +439,18 @@ Name=Mini Celsius Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=°C
 PositionX=-23
-PositionY=-2
+PositionY=-3
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
 [Layer25]
-Name=Mini Celsius Caption
+Name=Mini Percent Caption
 VisibilitySource=IsPresentMonDataAvailable
-Text=°C
-PositionX=-23
-PositionY=-3
+Text=%
+PositionX=-13
+PositionY=-1
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
@@ -460,24 +461,13 @@ Name=Mini Percent Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=%
 PositionX=-13
-PositionY=-1
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=0
-Size=50
-TextColor=B19E9E
-[Layer27]
-Name=Mini Percent Caption
-VisibilitySource=IsPresentMonDataAvailable
-Text=%
-PositionX=-13
 PositionY=-2
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer28]
+[Layer27]
 Name=GPU Clock Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%GPU1 clock%
@@ -487,7 +477,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E
-[Layer29]
+[Layer28]
 Name=CPU Clock Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%CPU clock%
@@ -497,7 +487,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E
-[Layer30]
+[Layer29]
 Name=VRAM Percentage Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%GPU1 memory usage percent%
@@ -507,7 +497,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E,,94,FF8000,95,(GPU1 memory usage percent,0)
-[Layer31]
+[Layer30]
 Name=Mini Percent Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=%
@@ -518,7 +508,7 @@ ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer32]
+[Layer31]
 Name=RAM Percentage Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%RAM usage percent%
@@ -528,12 +518,23 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=B19E9E,,94,FF8000,95,(RAM usage percent,0)
-[Layer33]
+[Layer32]
 Name=Mini Percent Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=%
 PositionX=-13
 PositionY=-4
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer33]
+Name=Mini Mhz Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=Mhz
+PositionX=-18
+PositionY=-1
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
@@ -544,76 +545,68 @@ Name=Mini Mhz Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=Mhz
 PositionX=-18
-PositionY=-1
-ExtentX=-1
-ExtentY=-1
-ExtentOrigin=0
-Size=50
-TextColor=B19E9E
-[Layer35]
-Name=Mini Mhz Caption
-VisibilitySource=IsPresentMonDataAvailable
-Text=Mhz
-PositionX=-18
 PositionY=-2
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer36]
+[Layer35]
 Name=FPS Display Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<FR>
-PositionX=-9
-PositionY=-6
+PositionX=-12
+PositionY=-13
 ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
+Size=200
 TextColor=FFFFFF
-[Layer37]
+[Layer36]
 Name=FPS 0.1%Low Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%FrameratePresented0Dot1PLow%
-PositionX=-18
-PositionY=-6
+PositionX=-17
+PositionY=-13
 ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
+Size=125
 TextColor=FFFFFF
-[Layer38]
+[Layer37]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=0.1%
-PositionX=-22
-PositionY=-6
+PositionX=-21
+PositionY=-13
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer39]
+[Layer38]
 Name=FPS 1% Low Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=%FrameratePresented1Dot0PLow%
-PositionX=-14
-PositionY=-6
+PositionX=-7
+PositionY=-13
 ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
+Size=125
 TextColor=FFFFFF
-[Layer40]
+[Layer39]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
 Text=1%
-PositionX=-18
-PositionY=-6
+PositionX=-11
+PositionY=-13
 ExtentX=-1
 ExtentY=-1
 ExtentOrigin=0
 Size=50
 TextColor=B19E9E
-[Layer41]
+[Layer40]
 Name=Displayed Frametime Graph
 VisibilitySource=IsPresentMonDataAvailable
 Text=<G=msBetweenDisplayChange,0,0,1,0,100,1>
@@ -623,7 +616,7 @@ ExtentX=-22
 ExtentY=-2
 ExtentOrigin=0
 TextColor=8000
-[Layer42]
+[Layer41]
 Name=Frametime in Present Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Present
@@ -634,7 +627,7 @@ ExtentY=-1
 ExtentOrigin=0
 Size=70
 TextColor=B19E9E
-[Layer43]
+[Layer42]
 Name=CPU Frametime and Preset Graph
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,0><ELSE><G=CPUFrametime,0,0,1,0,50,0>
@@ -644,7 +637,7 @@ ExtentX=-22
 ExtentY=-2
 ExtentOrigin=0
 TextColor=FF00
-[Layer44]
+[Layer43]
 Name=CPU Frametime and Present Graph Fill
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,1><ELSE><G=CPUFrametime,0,0,1,0,50,1>
@@ -654,7 +647,7 @@ ExtentX=-22
 ExtentY=-2
 ExtentOrigin=0
 TextColor=8000
-[Layer45]
+[Layer44]
 Name=Frametime Displayed
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent>%msBetweenPresents% ms <ELSE>%CPUFrametime% ms
@@ -666,7 +659,7 @@ ExtentOrigin=0
 Size=70
 TextColor=B19E9E
 RefreshPeriod=500
-[Layer46]
+[Layer45]
 Name=Frametime in Display Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Display
@@ -677,27 +670,27 @@ ExtentY=0
 ExtentOrigin=0
 Size=70
 TextColor=B19E9E
-[Layer47]
+[Layer46]
 Name=Driver Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Driver %Driver%
-PositionX=-16
-PositionY=-12
+PositionX=-18
+PositionY=-11
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=76B900
+[Layer47]
+Name=LimitedBy Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
+PositionX=-1
+PositionY=-11
 ExtentX=0
 ExtentY=0
 ExtentOrigin=0
 TextColor=76B900
 [Layer48]
-Name=LimitedBy Info
-VisibilitySource=IsPresentMonDataAvailable
-Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
-PositionX=-3
-PositionY=-12
-ExtentX=0
-ExtentY=0
-ExtentOrigin=0
-TextColor=76B900
-[Layer49]
 Name=Present Mode Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent>Present-to-Present<ELSE>Start-to-Start

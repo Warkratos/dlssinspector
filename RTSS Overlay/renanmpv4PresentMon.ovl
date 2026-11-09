@@ -149,12 +149,12 @@ Formula=
 Provider=PresentMon
 ID=msBetweenDisplayChange
 [Source19]
-Name=FramerateDisplayed
+Name=FrameratePresented
 Units=FPS
 Format=
 Formula=
 Provider=PresentMon
-ID=FramerateDisplayed
+ID=FrameratePresented
 [Source20]
 Name=IsPresentToPresent
 Units=
@@ -554,7 +554,7 @@ TextColor=B19E9E
 [Layer35]
 Name=FPS Display Info
 VisibilitySource=IsPresentMonDataAvailable
-Text=<FR>
+Text=%FrameratePresented%
 PositionX=-11
 PositionY=-12
 ExtentX=-5
@@ -562,7 +562,7 @@ ExtentY=-1
 ExtentOrigin=2
 Size=150
 TextColor=FFFFFF
-RefreshPeriod=500
+RefreshPeriod=1000
 [Layer36]
 Name=FPS 0.1%Low Info
 VisibilitySource=IsPresentMonDataAvailable
@@ -573,7 +573,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=500
+RefreshPeriod=1000
 [Layer37]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
@@ -595,7 +595,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=500
+RefreshPeriod=1000
 [Layer39]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable

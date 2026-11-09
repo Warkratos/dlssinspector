@@ -562,6 +562,7 @@ ExtentY=-1
 ExtentOrigin=2
 Size=150
 TextColor=FFFFFF
+RefreshPeriod=500
 [Layer36]
 Name=FPS 0.1%Low Info
 VisibilitySource=IsPresentMonDataAvailable
@@ -572,6 +573,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
+RefreshPeriod=500
 [Layer37]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable
@@ -593,6 +595,7 @@ ExtentX=-4
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
+RefreshPeriod=500
 [Layer39]
 Name=1%Low Caption
 VisibilitySource=IsPresentMonDataAvailable

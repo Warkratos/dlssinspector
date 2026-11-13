@@ -25,17 +25,19 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 **Sharpening - Value** -> Essa é a flag que controla a força do filtro de nitidez, recomendo entre 0.05 até 0.15. Configure essas flags por perfil de jogo caso prefira.  
 **Sharpening Filter - Enabled** -> On ativa o filtro, Off desativa.  
 
-**rBAR - Enable** -> Essa flag força o Resizable Bar ligado para o jogo, boa parte dos jogos se beneficiam disso. Se forçar no perfil global, os jogos que foram testados pela NVIDIA e apresentaram problemas com rBAR ficarão desabilitados por padrão no perfil do jogo (ex: Battlefield 6) que tem prioridade em cima do perfil global, esse seria o caminho inverso ao padrão do driver que é habilitar apenas para jogos aprovados.  
+**rBAR - Enable v2** -> Essa flag força o Resizable Bar ligado para o jogo, boa parte dos jogos se beneficiam disso. Se forçar no perfil global, os jogos que foram testados pela NVIDIA e apresentaram problemas com rBAR ficarão desabilitados por padrão no perfil do jogo (ex: Battlefield 6) que tem prioridade em cima do perfil global, esse seria o caminho inverso ao padrão do driver que é habilitar apenas para jogos aprovados.  
 **rBAR - Size Limit** -> A maioria dos jogos aprovados pela NVIDIA usam esse valor em 1GB, **alguns jogos podem** se beneficiar em aumentar isso para o valor total da VRAM instalada na máquina.  
 
 ## Recomendações para o perfil Global:  
 Todos os DLSS DLL Override -> On  
 DLSS - Forced Model Preset Profile -> Custom  
-NVIDIA Ansel - Enabled (modo foto da NVIDIA) -> Off
+NVIDIA Ansel - Enabled (modo foto da NVIDIA) -> Off  
+CUDA - Force P2 State -> Off
+DLSS - Enable Streamline Override -> On
 
 **RTX 40-50:**  
 DLSS - Forced Preset Letter -> Preset M  
-DLSS-FG - Forced Preset Letter -> Preset B  
+DLSS-FG - Forced Preset Letter -> Preset B para Qualidade ou C para Desempenho   
 DLSS-RR - Forced Preset Letter -> Usar preset recomendado
 
 **RTX 20-30:**  
@@ -48,6 +50,7 @@ Maximum Pre-rendered Frames -> 1
 Ultra Low-Latency - Enabled -> On
 
 **OPCIONAL - RivaTuner Statistics Server (RTSS):** Se tiver o RTSS instalado na máquina, nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, como na imagem abaixo. O NVIDIA reflex tem prioridade e sobrepõe configurações de baixa latência do NVIDIA App e NVIDIA Profile Inspector quando forçado pelo RTSS ou disponível dentro do jogo.    
-<img width="387" height="619" alt="HFAqzVuXkAAQY26" src="https://github.com/user-attachments/assets/45ccf940-22ca-431f-8684-dd0be2937631" />  
+<img width="398" height="637" alt="image" src="https://github.com/user-attachments/assets/7ac5fc21-6d5e-45a0-ba47-8eeccdce3204" />
+
 
 Depois de configurado o RTSS dessa forma volte ao menu inicial do RTSS, clique com o botão direito na caixa "Framerate Limit" e escolha "VRR cap"  

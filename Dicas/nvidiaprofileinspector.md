@@ -32,7 +32,7 @@ As funcionalidades adicionadas ao NVIDIA App podem ser **forçadas em qualquer j
 Todos os DLSS DLL Override -> On  
 DLSS - Forced Model Preset Profile -> Custom  
 NVIDIA Ansel - Enabled (modo foto da NVIDIA) -> Off  
-CUDA - Force P2 State -> Off
+CUDA - Force P2 State -> Off  
 DLSS - Enable Streamline Override -> On
 
 **RTX 40-50:**  

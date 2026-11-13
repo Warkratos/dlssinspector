@@ -1,15 +1,15 @@
-# Overlay Preview
+# RTSS Overlay by Warkratos V4
 
 Fiz 2 versões, uma utiliza dos dados PresentMon embutidos no RTSS pra apresentar o PC Latency, Presentation Model e estatísticas de Frametime em Display Time que são ideais para Frame Gen, e o outro usa somente os dados nativos do RTSS.
 
 Arquivo .ovl pra colocar na pasta "..\RivaTuner Statistics Server\Plugins\Client\Overlays"
 
-## Versão sem dados do PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4.ovl)
+## Versão Nativa: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4.ovl)
 
 <img width="334" height="167" alt="image" src="https://github.com/user-attachments/assets/4aef9b3b-6e62-402e-a05a-51c8b7967326" /><br/>
 Nessa versão, as métricas de "FPS Average", "FPS 1% Low" e "FPS 0.1% Low" aparecem somente no quando o modo benchmark é ativado.
 
-## Versão com dados do PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4PresentMon.ovl)
+## Versão PresentMon: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4PresentMon.ovl)
 
 <img width="330" height="328" alt="image" src="https://github.com/user-attachments/assets/d77f2450-f67f-4e12-9172-60ff6ceb31ca" /><br/>
 Funcionalidades dessa versão: 
@@ -17,3 +17,7 @@ Funcionalidades dessa versão:
 - Mostra o tipo de presentation model utilizado pelo jogo atualmente, veja mais sobre os modelos de apresentação e porque é recomendado ficar no "Independent Flip" [clicando aqui](https://github.com/Warkratos/dlssinspector/blob/main/Dicas/presentationmodel.md)
 - Mostra se está sendo limitado pela GPU ou CPU (gargalo).<br/><br/>
 **Importante:** Instale ao menos a versão 7.3.8 do RTSS para funcionamento correto, pois utiliza o novo dado "PC Latency" do PresentMon embutido no RTSS.
+
+## Versão PresentMon + NVIDIA Frame Generation (Adaptativa): [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4PresentMonFG.ovl)
+<img width="269" height="272" alt="image" src="https://github.com/user-attachments/assets/e98b71a4-d691-4489-aec2-7e376c64e9c9" /><br/>
+Essa versão tem suporte ao Frame Generation da NVIDIA, e mostra dados de quando está ligado ou desligado, assim como o multiplicador e 1% Low e 0.1% Low.

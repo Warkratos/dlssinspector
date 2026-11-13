@@ -1,0 +1,803 @@
+[Master]
+Implementation=2
+FontFace=NVIDIA Sans Medium
+FontHeight=-9
+FontWeight=500
+ZoomRatio=2
+[Settings]
+Name=renanmp
+EnvVars=PM_RefreshPeriod=33;PM_DisplayDelay=3000
+RefreshPeriod=1000
+LockUserSettings=0
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=32
+Tables=1
+Layers=53
+[Source0]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source1]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source2]
+Name=RAM usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage
+[Source3]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source4]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source5]
+Name=GPU1 memory usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source6]
+Name=GPU1 memory temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory temperature
+[Source7]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source8]
+Name=GPU1 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 clock
+[Source9]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source10]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source11]
+Name=FrameratePresented1Dot0PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenPresents,99)
+Provider=HAL
+ID=Stub
+[Source12]
+Name=FrameratePresented0Dot1PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenPresents,99.9)
+Provider=HAL
+ID=Stub
+[Source13]
+Name=FramerateDisplayed1Dot0PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenDisplayChange,99)
+Provider=HAL
+ID=Stub
+[Source14]
+Name=FramerateDisplayed0Dot1PLow
+Units=FPS
+Format=
+Formula=1000/percentile(msBetweenDisplayChange,99.9)
+Provider=HAL
+ID=Stub
+[Source15]
+Name=IsGpuLimited
+Units=
+Format=
+Formula=(msGpuActive / msBetweenPresents) >= 0.75
+Provider=HAL
+ID=Stub
+[Source16]
+Name=IsPresentMonDataAvailable
+Units=
+Format=
+Formula=validate(x)
+Provider=PresentMon
+ID=msBetweenPresents
+[Source17]
+Name=PresentMode
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=PresentMode
+[Source18]
+Name=PCLatency
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=PCLatency
+[Source19]
+Name=Status
+Units=
+Format=
+Formula=
+Provider=PresentMon
+ID=Status
+[Source20]
+Name=msBetweenDisplayChange
+Units=ms
+Format=%0.1f
+Formula=
+Provider=PresentMon
+ID=msBetweenDisplayChange
+[Source21]
+Name=FrameratePresented
+Units=FPS
+Format=
+Formula=
+Provider=PresentMon
+ID=FrameratePresented
+[Source22]
+Name=FramerateDisplayed
+Units=FPS
+Format=
+Formula=
+Provider=PresentMon
+ID=FramerateDisplayed
+[Source23]
+Name=IsPresentToPresent
+Units=
+Format=
+Formula=(key(0x46) & 1) == 0
+Provider=PresentMon
+ID=msBetweenPresents
+[Source24]
+Name=CPUFrametime
+Units=ms
+Format=%0.1f
+Formula=
+Provider=PresentMon
+ID=CPUFrametime
+[Source25]
+Name=msBetweenPresents
+Units=ms
+Format=%0.1f
+Formula=
+Provider=PresentMon
+ID=msBetweenPresents
+[Source26]
+Name=msGpuActive
+Units=ms
+Format=
+Formula=
+Provider=PresentMon
+ID=msGpuActive
+[Source27]
+Name=ReflexTimer
+Units=ms
+Format=
+Formula=reflextime(1)
+Provider=HAL
+ID=Stub
+[Source28]
+Name=RenderFPS
+Units=FPS
+Format=
+Formula=1000/swavg(ReflexTimer,4)
+Provider=HAL
+ID=Stub
+[Source29]
+Name=IsReflexON
+Units=
+Format=
+Formula=validate(reflexlatency(11,12))
+Provider=HAL
+ID=Stub
+[Source30]
+Name=FGMultiplier
+Units=
+Format=
+Formula=FrameratePresented / RenderFPS
+Provider=HAL
+ID=Stub
+[Source31]
+Name=FGValidate
+Units=
+Format=
+Formula=FGMultiplier > 1.5
+Provider=HAL
+ID=Stub
+[Table0]
+Name=
+Lines=0
+[Layer0]
+Name=Background
+Text=<SWITCH Status><CASE 0><IF !IsPresentMonDataAvailable>Loading PresentMon data stream...<IF><CASE 1>PresentMon service is not available...<CASE 2>Failed to start PresentMon data stream...<CASE 3>PresentMon data stream failed...
+PositionX=-1
+PositionY=-1
+ExtentX=-27
+ExtentY=-14
+ExtentOrigin=4
+BgndColor=B4000000
+[Layer1]
+Name=Displayed Frametime Graph
+VisibilitySource=IsPresentMonDataAvailable
+Text=<G=msBetweenDisplayChange,0,0,1,0,100,0>
+PositionX=-1
+PositionY=-9
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=FF00
+[Layer2]
+Name=D3D Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<API>
+PositionX=-1
+PositionY=-6
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer3]
+Name=Frametime Displayed
+VisibilitySource=IsPresentMonDataAvailable
+Text=%msBetweenDisplayChange% ms
+PositionX=-23
+PositionY=-9
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+RefreshPeriod=1500
+[Layer4]
+Name=FPS Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF FGValidate>FG<ELSE>FPS
+PositionX=-16
+PositionY=-12
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=1
+Size=50
+TextColor=B19E9E
+[Layer5]
+Name=RAM Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%RAM% RAM
+PositionX=-1
+PositionY=-4
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=ED1C24
+[Layer6]
+Name=VRAM Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%VRAM% VRAM
+PositionX=-1
+PositionY=-3
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900
+[Layer7]
+Name=CPU Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%CPUShort%
+PositionX=-1
+PositionY=-2
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=ED1C24
+[Layer8]
+Name=GPU Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU%
+PositionX=-1
+PositionY=-1
+ExtentX=-8
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900
+[Layer9]
+Name=RAM Usage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%RAM usage%
+PositionX=-14
+PositionY=-4
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer10]
+Name=VRAM Usage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 memory usage%
+PositionX=-14
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer11]
+Name=CPU Usage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%CPU usage%
+PositionX=-9
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,89,FF8040,90,(CPU usage,0)
+[Layer12]
+Name=GPU Usage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 usage%
+PositionX=-9
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,97,FF8000,98,(GPU1 usage,0)
+[Layer13]
+Name=Mini GB Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=GB
+PositionX=-18
+PositionY=-4
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer14]
+Name=Mini GB Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=GB
+PositionX=-18
+PositionY=-3
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer15]
+Name=GPU Temperature Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 temperature%
+PositionX=-19
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,84,FF8000,85,(GPU1 temperature,0)
+[Layer16]
+Name=CPU Temperature Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%CPU temperature%
+PositionX=-19
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
+[Layer17]
+Name=Presentation Mode Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
+PositionX=-9
+PositionY=-6
+ExtentX=-18
+ExtentY=-1
+ExtentOrigin=4
+TextColor=B19E9E
+[Layer18]
+Name=PC Latency Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=PC Latency
+PositionX=-1
+PositionY=-5
+ExtentX=-6
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8040
+[Layer19]
+Name=PCL Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%PCLatency%
+PositionX=-9
+PositionY=-5
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+RefreshPeriod=1500
+[Layer20]
+Name=ms Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=ms
+PositionX=-13
+PositionY=-5
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer21]
+Name=VRAM Temperature Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 memory temperature%
+PositionX=-19
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,74,FF8000,75,(GPU1 memory temperature,0)
+[Layer22]
+Name=Mini Celsius Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=°C
+PositionX=-23
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer23]
+Name=Mini Celsius Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=°C
+PositionX=-23
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer24]
+Name=Mini Celsius Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=°C
+PositionX=-23
+PositionY=-3
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer25]
+Name=Mini Percent Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=%
+PositionX=-13
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer26]
+Name=Mini Percent Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=%
+PositionX=-13
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer27]
+Name=GPU Clock Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 clock%
+PositionX=-14
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer28]
+Name=CPU Clock Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%CPU clock%
+PositionX=-14
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E
+[Layer29]
+Name=VRAM Percentage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%GPU1 memory usage percent%
+PositionX=-9
+PositionY=-3
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8000,95,(GPU1 memory usage percent,0)
+[Layer30]
+Name=Mini Percent Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=%
+PositionX=-13
+PositionY=-3
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer31]
+Name=RAM Percentage Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=%RAM usage percent%
+PositionX=-9
+PositionY=-4
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=B19E9E,,94,FF8000,95,(RAM usage percent,0)
+[Layer32]
+Name=Mini Percent Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=%
+PositionX=-13
+PositionY=-4
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer33]
+Name=Mini Mhz Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=Mhz
+PositionX=-18
+PositionY=-1
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer34]
+Name=Mini Mhz Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=Mhz
+PositionX=-18
+PositionY=-2
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer35]
+Name=FPS Display Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF FGValidate>%FramerateDisplayed%<ELSE>%FrameratePresented%
+PositionX=-11
+PositionY=-12
+ExtentX=-5
+ExtentY=-1
+ExtentOrigin=2
+Size=150
+TextColor=FFFFFF
+RefreshPeriod=1000
+[Layer36]
+Name=FPS 0.1%Low Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF FGValidate>%FramerateDisplayed0Dot1PLow%<ELSE>%FrameratePresented0Dot1PLow%
+PositionX=-17
+PositionY=-12
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+RefreshPeriod=1000
+[Layer37]
+Name=1%Low Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=0.1%
+PositionX=-21
+PositionY=-12
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=1
+Size=50
+TextColor=B19E9E
+[Layer38]
+Name=FPS 1% Low Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF FGValidate>%FramerateDisplayed0Dot1PLow%<ELSE>%FrameratePresented1Dot0PLow%
+PositionX=-6
+PositionY=-12
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+RefreshPeriod=1000
+[Layer39]
+Name=1%Low Caption
+VisibilitySource=IsPresentMonDataAvailable
+Text=1%
+PositionX=-10
+PositionY=-12
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=1
+Size=50
+TextColor=B19E9E
+[Layer40]
+Name=Displayed Frametime Graph
+VisibilitySource=IsPresentMonDataAvailable
+Text=<G=msBetweenDisplayChange,0,0,1,0,100,1>
+PositionX=-1
+PositionY=-9
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=8000
+[Layer41]
+Name=Frametime in Present Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Present
+PositionX=-23
+PositionY=-8
+ExtentX=-2
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+[Layer42]
+Name=CPU Frametime and Preset Graph
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,0><ELSE><G=CPUFrametime,0,0,1,0,50,0>
+PositionX=-1
+PositionY=-7
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=FF00
+[Layer43]
+Name=CPU Frametime and Present Graph Fill
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent><G=msBetweenPresents,0,0,1,0,50,1><ELSE><G=CPUFrametime,0,0,1,0,50,1>
+PositionX=-1
+PositionY=-7
+ExtentX=-22
+ExtentY=-2
+ExtentOrigin=0
+TextColor=8000
+[Layer44]
+Name=Frametime Displayed
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent>%msBetweenPresents% ms <ELSE>%CPUFrametime% ms
+PositionX=-23
+PositionY=-7
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+RefreshPeriod=1500
+[Layer45]
+Name=Frametime in Display Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Display
+PositionX=-23
+PositionY=-10
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=70
+TextColor=B19E9E
+[Layer46]
+Name=Driver Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Driver %Driver%
+PositionX=-18
+PositionY=-14
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=76B900
+[Layer47]
+Name=LimitedBy Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
+PositionX=-1
+PositionY=-14
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=76B900
+[Layer48]
+Name=Present Mode Info
+VisibilitySource=IsPresentMonDataAvailable
+Text=<IF IsPresentToPresent>Present-to-Present<ELSE>Start-to-Start
+PositionX=-1
+PositionY=-7
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+Size=50
+TextColor=B19E9E
+[Layer49]
+Name=FGS Caption
+VisibilitySource=FGValidate
+Text=Render
+PositionX=-16
+PositionY=-11
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=1
+Size=50
+TextColor=B19E9E
+[Layer50]
+Name=FG Multiplier Info
+VisibilitySource=FGValidate
+Text=%FGMultiplier%x
+PositionX=-17
+PositionY=-11
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+RefreshPeriod=1000
+[Layer51]
+Name=Render FPS Info
+VisibilitySource=FGValidate
+Text=%RenderFPS%
+PositionX=-11
+PositionY=-11
+ExtentX=-5
+ExtentY=-1
+ExtentOrigin=2
+TextColor=FFFFFF
+RefreshPeriod=1000
+[Layer52]
+Name=FG ON info
+VisibilitySource=FGValidate
+Text=FG ON
+PositionX=-6
+PositionY=-11
+ExtentX=-5
+ExtentY=-1
+ExtentOrigin=0
+TextColor=76B900

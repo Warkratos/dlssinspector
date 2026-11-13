@@ -12,7 +12,7 @@ LockUserSettings=0
 EmbeddedImage=
 PingAddr=
 [General]
-Sources=32
+Sources=33
 Tables=1
 Layers=53
 [Source0]
@@ -219,20 +219,27 @@ Formula=1000/swavg(ReflexTimer,4)
 Provider=HAL
 ID=Stub
 [Source29]
+Name=ReflexLatency
+Units=ms
+Format=
+Formula=reflexlatency(1,12)
+Provider=HAL
+ID=Stub
+[Source30]
 Name=IsReflexON
 Units=
 Format=
 Formula=validate(reflexlatency(11,12))
 Provider=HAL
 ID=Stub
-[Source30]
+[Source31]
 Name=FGMultiplier
 Units=
 Format=
 Formula=FrameratePresented / RenderFPS
 Provider=HAL
 ID=Stub
-[Source31]
+[Source32]
 Name=FGValidate
 Units=
 Format=
@@ -439,7 +446,7 @@ TextColor=FF8040
 [Layer19]
 Name=PCL Info
 VisibilitySource=IsPresentMonDataAvailable
-Text=%PCLatency%
+Text=<IF IsReflexON>%ReflexLatency%<ELSE>%PCLatency%
 PositionX=-9
 PositionY=-5
 ExtentX=-4

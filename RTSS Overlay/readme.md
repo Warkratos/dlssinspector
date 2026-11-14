@@ -4,6 +4,9 @@ Fiz 2 versões, uma utiliza dos dados PresentMon embutidos no RTSS pra apresenta
 
 Arquivo .ovl pra colocar na pasta "..\RivaTuner Statistics Server\Plugins\Client\Overlays"
 
+**Configuração Recomendada do RTSS:**  
+<img width="377" height="592" alt="image" src="https://github.com/user-attachments/assets/f9ac3129-0e90-49ee-b12e-9e4cd3fcba25" />
+
 ## Versão Nativa: [Download](https://github.com/Warkratos/dlssinspector/raw/main/RTSS%20Overlay/renanmpv4.ovl)
 
 <img width="334" height="167" alt="image" src="https://github.com/user-attachments/assets/4aef9b3b-6e62-402e-a05a-51c8b7967326" /><br/>

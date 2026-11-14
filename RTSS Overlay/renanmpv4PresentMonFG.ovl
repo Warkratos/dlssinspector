@@ -236,14 +236,14 @@ ID=Stub
 Name=FGMultiplier
 Units=
 Format=
-Formula=FrameratePresented / RenderFPS
+Formula=FramerateDisplayed / RenderFPS
 Provider=HAL
 ID=Stub
 [Source32]
 Name=FGValidate
 Units=
 Format=
-Formula=FGMultiplier > 1.5
+Formula=FGMultiplier >= 2
 Provider=HAL
 ID=Stub
 [Table0]
@@ -426,7 +426,7 @@ TextColor=B19E9E,,74,FF8000,75,(CPU temperature,0)
 [Layer17]
 Name=Presentation Mode Info
 VisibilitySource=IsPresentMonDataAvailable
-Text=<SWITCH PresentMode><CASE 1>Hw: legacy flip<CASE 2>Hw: legacy copy<CASE 3>Hw: independent flip<CASE 4>Composed: flip<CASE 5>Composed: GPU copy<CASE 6>Composed: CPU copy<CASE 8>Hwc: independent flip
+Text=<SWITCH PresentMode><CASE 1>HW: Legacy Flip<CASE 2>HW: Legacy Copy<CASE 3>HW: Independent Flip<CASE 4>Composed: Flip<CASE 5>Composed: GPU Copy<CASE 6>Composed: CPU Copy<CASE 8>MPO: Independent Flip
 PositionX=-9
 PositionY=-6
 ExtentX=-18
@@ -436,7 +436,7 @@ TextColor=B19E9E
 [Layer18]
 Name=PC Latency Caption
 VisibilitySource=IsPresentMonDataAvailable
-Text=PC Latency
+Text=<IF IsReflexON><C=76B900>Reflex LAT<ELSE>Latency
 PositionX=-1
 PositionY=-5
 ExtentX=-6
@@ -625,14 +625,14 @@ ExtentY=-1
 ExtentOrigin=2
 Size=150
 TextColor=FFFFFF
-RefreshPeriod=1000
+RefreshPeriod=1500
 [Layer36]
 Name=FPS 0.1%Low Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=<IF FGValidate>%FramerateDisplayed0Dot1PLow%<ELSE>%FrameratePresented0Dot1PLow%
-PositionX=-17
+PositionX=-16
 PositionY=-12
-ExtentX=-4
+ExtentX=-5
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
@@ -729,8 +729,8 @@ VisibilitySource=IsPresentMonDataAvailable
 Text=Display
 PositionX=-23
 PositionY=-10
-ExtentX=0
-ExtentY=0
+ExtentX=-1
+ExtentY=-1
 ExtentOrigin=0
 Size=70
 TextColor=B19E9E
@@ -738,11 +738,11 @@ TextColor=B19E9E
 Name=Driver Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Driver %Driver%
-PositionX=-18
+PositionX=-17
 PositionY=-14
-ExtentX=0
-ExtentY=0
-ExtentOrigin=0
+ExtentX=-11
+ExtentY=-1
+ExtentOrigin=8
 TextColor=76B900
 [Layer47]
 Name=LimitedBy Info
@@ -750,9 +750,9 @@ VisibilitySource=IsPresentMonDataAvailable
 Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
 PositionX=-1
 PositionY=-14
-ExtentX=0
-ExtentY=0
-ExtentOrigin=0
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=6
 TextColor=76B900
 [Layer48]
 Name=Present Mode Info
@@ -760,9 +760,9 @@ VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsPresentToPresent>Present-to-Present<ELSE>Start-to-Start
 PositionX=-1
 PositionY=-7
-ExtentX=0
-ExtentY=0
-ExtentOrigin=0
+ExtentX=-1
+ExtentY=-1
+ExtentOrigin=1
 Size=50
 TextColor=B19E9E
 [Layer49]
@@ -776,6 +776,7 @@ ExtentY=-1
 ExtentOrigin=1
 Size=50
 TextColor=B19E9E
+RefreshPeriod=1000
 [Layer50]
 Name=FG Multiplier Info
 VisibilitySource=FGValidate
@@ -797,7 +798,7 @@ ExtentX=-5
 ExtentY=-1
 ExtentOrigin=2
 TextColor=FFFFFF
-RefreshPeriod=1000
+RefreshPeriod=1500
 [Layer52]
 Name=FG ON info
 VisibilitySource=FGValidate
@@ -808,3 +809,4 @@ ExtentX=-5
 ExtentY=-1
 ExtentOrigin=0
 TextColor=76B900
+RefreshPeriod=1000

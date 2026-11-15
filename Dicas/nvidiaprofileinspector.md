@@ -49,7 +49,7 @@ Vertical Sync -> Force On
 Maximum Pre-rendered Frames -> 1  
 Ultra Low-Latency - Enabled -> On
 
-**OPCIONAL - RivaTuner Statistics Server (RTSS):** Se tiver o RTSS instalado na máquina, nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"** e desative o **"Enable passive waiting"**, também ative o **"Use Microsoft Detours API Hooking"**, como na imagem abaixo, também desative o "Inject NVIDIA Reflex latency markers". O NVIDIA reflex tem prioridade e sobrepõe configurações de baixa latência do NVIDIA App e NVIDIA Profile Inspector quando forçado pelo RTSS ou disponível dentro do jogo.    
+**OPCIONAL - RivaTuner Statistics Server (RTSS):** Se tiver o RTSS instalado na máquina, nas configurações do RTSS mude o **"Enable framerate limiter"** para **"NVIDIA reflex"**, desative o **"Enable passive waiting"** e também o **"Inject NVIDIA Reflex latency markers"**, e ative o **"Use Microsoft Detours API Hooking"** como na imagem abaixo. O NVIDIA reflex tem prioridade e sobrepõe configurações de baixa latência do NVIDIA App e NVIDIA Profile Inspector quando forçado pelo RTSS ou disponível dentro do jogo.    
 <img width="377" height="592" alt="image" src="https://github.com/user-attachments/assets/f9ac3129-0e90-49ee-b12e-9e4cd3fcba25" />
 
 

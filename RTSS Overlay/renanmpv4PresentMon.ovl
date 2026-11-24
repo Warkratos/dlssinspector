@@ -675,20 +675,20 @@ TextColor=B19E9E
 Name=Driver Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Driver %Driver%
-PositionX=-18
+PositionX=-16
 PositionY=-14
-ExtentX=0
-ExtentY=0
-ExtentOrigin=0
+ExtentX=-10
+ExtentY=-1
+ExtentOrigin=8
 TextColor=76B900
 [Layer47]
 Name=LimitedBy Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
-PositionX=-1
+PositionX=-3
 PositionY=-14
-ExtentX=0
-ExtentY=0
+ExtentX=-1
+ExtentY=-1
 ExtentOrigin=0
 TextColor=76B900
 [Layer48]

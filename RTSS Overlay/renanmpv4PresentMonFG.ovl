@@ -439,7 +439,7 @@ VisibilitySource=IsPresentMonDataAvailable
 Text=<IF IsReflexON><C=76B900>Reflex LAT<ELSE>Latency
 PositionX=-1
 PositionY=-5
-ExtentX=-6
+ExtentX=-8
 ExtentY=-1
 ExtentOrigin=0
 TextColor=FF8040
@@ -738,7 +738,7 @@ TextColor=B19E9E
 Name=Driver Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Driver %Driver%
-PositionX=-17
+PositionX=-16
 PositionY=-14
 ExtentX=-11
 ExtentY=-1
@@ -748,7 +748,7 @@ TextColor=76B900
 Name=LimitedBy Info
 VisibilitySource=IsPresentMonDataAvailable
 Text=Limited by <IF IsGpuLimited><C=8000>GPU<C><ELSE><C=8000FF>CPU<C>
-PositionX=-1
+PositionX=-2
 PositionY=-14
 ExtentX=-1
 ExtentY=-1

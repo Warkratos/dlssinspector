@@ -110,7 +110,7 @@ PositionY=-1
 ExtentX=-27
 ExtentY=-7
 ExtentOrigin=0
-BgndColor=80000000
+BgndColor=B4000000
 [Layer1]
 Name=Frametime graph
 Text=<G=Frametime,0,0,1,0,100,0>
